@@ -111,8 +111,8 @@
         }
 
         h3::before {
-            content: '🌸';
-            margin-right: 10px;
+            content: '';
+            margin-right: 0px;
         }
 
         .features {
@@ -186,30 +186,7 @@
             border-left: 3px solid #3498db;
         }
 
-        .character-section {
-            position: relative;
-            background: #f0f8ff;
-        }
 
-        .character-images {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-
-        .character-img {
-            width: 120px;
-            height: auto;
-            margin: 10px;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
-            transition: transform 0.3s ease;
-        }
-
-        .character-img:hover {
-            transform: scale(1.1) rotate(5deg);
-        }
 
         .cta-section {
             background: #2c3e50;
@@ -289,8 +266,43 @@
                 padding: 20px;
             }
             
-            .character-img {
-                width: 80px;
+            /* 記事の書き方例セクションのレスポンシブ */
+            .writing-examples {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            
+            .writing-example-card {
+                min-width: 250px !important;
+                margin: 10px 0 !important;
+            }
+            
+            /* CTAセクションのレスポンシブ */
+            .cta-header {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+            }
+            
+            .cta-header img {
+                width: 70px !important;
+            }
+            
+            .cta-main {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+            
+            .cta-main img {
+                width: 70px !important;
+            }
+            
+            .cta-message h3 {
+                font-size: 1.8em !important;
+            }
+            
+            .cta-message p {
+                font-size: 1.0em !important;
             }
         }
     </style>
@@ -308,9 +320,14 @@
         <!-- Scrollとは -->
         <div class="slide">
             <h2>📜 Scrollとは</h2>
-            <div class="highlight">
-                <p><strong>HAGAKUREプログラミング塾参加者向けの学習共有ブログです。</strong></p>
-                <p>名前は『葉隠』にちなみ、学びを巻物のように記録していく思いを込めています。</p>
+            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                <div style="flex: 1;">
+                    <div class="highlight">
+                        <p><strong>HAGAKUREプログラミング塾参加者向けの学習共有ブログです。</strong></p>
+                        <p>名前は『葉隠』にちなみ、学びを巻物のように記録していく思いを込めています。</p>
+                    </div>
+                </div>
+                <img src="images/voice-ninja1.png" alt="忍者1" style="width: 100px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
             </div>
             
             <h3>プロジェクトの目的</h3>
@@ -336,7 +353,10 @@
 
         <!-- 開発体制 -->
         <div class="slide team-section">
-            <h2>👥 開発体制とメンバー</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                <h2 style="margin: 0;">👥 開発体制とメンバー</h2>
+                <img src="images/voice-ninja2.png" alt="忍者2" style="width: 80px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
+            </div>
             <div class="team-grid">
                 <div class="team-card">
                     <h4>🎨 デザイン班</h4>
@@ -446,7 +466,10 @@
 
         <!-- 使い方 -->
         <div class="slide">
-            <h2>📝 基本操作</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                <h2 style="margin: 0;">📝 基本操作</h2>
+                <img src="images/voice-samurai.png" alt="侍" style="width: 90px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
+            </div>
             <div class="usage-steps">
                 <div class="usage-step">
                     <h4>ログイン</h4>
@@ -464,24 +487,28 @@
                     <h4>記事を公開する</h4>
                     <p>内容を確認して公開、公開後も編集可能</p>
                 </div>
-            </div>
+                        </div>
         </div>
 
-        <!-- キャラクター紹介 -->
-        <div class="slide character-section">
-            <h2>🥷 Scrollの仲間たち</h2>
-            <p>楽しい学習をサポートする個性豊かなキャラクターたちです！</p>
-            <div class="character-images">
-                <img src="images/voice-ninja1.png" alt="忍者1" class="character-img">
-                <img src="images/voice-ninja2.png" alt="忍者2" class="character-img">
-                <img src="images/voice-samurai.png" alt="侍" class="character-img">
-                <img src="images/machi-musume.png" alt="町娘" class="character-img">
+        <!-- 記事の書き方例 -->
+        <div class="slide">
+            <h2>✍️ 記事の書き方例</h2>
+            <div class="writing-examples" style="display: flex; justify-content: flex-start; gap: 30px; margin: 30px 0;">
+                <div class="writing-example-card" style="background: #ffffff; padding: 25px 35px; border-radius: 10px; border: 2px solid #e8f4f8; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2c3e50; font-size: 1.3em; margin: 0;">山下の場合</h3>
+                </div>
+                <div class="writing-example-card" style="background: #ffffff; padding: 25px 35px; border-radius: 10px; border: 2px solid #e8f4f8; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2c3e50; font-size: 1.3em; margin: 0;">古川の場合</h3>
+                </div>
             </div>
         </div>
 
         <!-- 今後の予定 -->
         <div class="slide">
-            <h2>🚀 今後追加予定の機能</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                <h2 style="margin: 0;">🚀 今後追加予定の機能</h2>
+                <img src="images/machi-musume.png" alt="町娘" style="width: 85px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
+            </div>
             <div class="features">
                 <div class="feature-card">
                     <h4>コメント機能</h4>
@@ -500,13 +527,26 @@
 
         <!-- CTA -->
         <div class="slide cta-section">
-            <h2>🌟 さあ、一緒にブログを書こう！</h2>
-            <div class="highlight" style="background: rgba(255,255,255,0.2); border-left-color: #fff;">
-                <h3 style="color: #fff;">アウトプットが1番学びになる</h3>
-                <p style="color: #fff; font-size: 1.2em;">このコミュニティの根幹を実施できるフォーマットです</p>
+            <div class="cta-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
+                <img src="images/voice-ninja2.png" alt="忍者2" style="width: 90px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));">
+                <div style="flex: 1; text-align: center;">
+                    <h2 style="margin: 0; color: #fff;">🌟 さあ、一緒にブログを書こう！</h2>
+                </div>
+                <img src="images/voice-ninja1.png" alt="忍者1" style="width: 100px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));">
             </div>
-            <a href="#" class="cta-button">今すぐブログを書く</a>
-            <a href="#" class="cta-button">プロジェクトを見る</a>
+            
+            <div class="cta-main" style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 40px 0;">
+                <img src="images/voice-samurai.png" alt="侍" style="width: 100px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));">
+                <div class="cta-message" style="text-align: center; background: rgba(255,255,255,0.95); padding: 25px 30px; border-radius: 15px; border: 3px solid #3498db;">
+                    <h3 style="font-size: 2.3em; margin: 10px 0; color: #2c3e50; font-weight: bold;">アウトプットが1番学びになる</h3>
+                    <p style="font-size: 1.2em; margin: 10px 0; color: #34495e;">このコミュニティの根幹を実施できるフォーマットです</p>
+                </div>
+                <img src="images/machi-musume.png" alt="町娘" style="width: 95px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));">
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://hagakurepgm.net/blog/" class="cta-button" target="_blank">今すぐブログを書く</a>
+            </div>
         </div>
 
     </div>
@@ -531,33 +571,7 @@
             });
         });
 
-        // キャラクター画像にランダムな動きを追加
-        document.addEventListener('DOMContentLoaded', function() {
-            const characters = document.querySelectorAll('.character-img');
-            
-            characters.forEach((char, index) => {
-                setTimeout(() => {
-                    char.style.animation = `bounce 2s infinite ${index * 0.3}s`;
-                }, 1000);
-            });
-        });
 
-        // バウンスアニメーションのCSS
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes bounce {
-                0%, 20%, 50%, 80%, 100% {
-                    transform: translateY(0);
-                }
-                40% {
-                    transform: translateY(-10px);
-                }
-                60% {
-                    transform: translateY(-5px);
-                }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html> 
